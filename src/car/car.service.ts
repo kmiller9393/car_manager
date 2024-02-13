@@ -1,6 +1,6 @@
 import { Injectable, HttpException } from '@nestjs/common';
 import { CARS } from './cars.mock';
-import { Car } from './car.types';
+import { CarDto } from './car.dto';
 
 @Injectable()
 export class CarService {
@@ -10,7 +10,7 @@ export class CarService {
     return this.cars;
   }
 
-  public postCar(car: Car) {
+  public postCar(car: CarDto) {
     return this.cars.push(car);
   }
 
