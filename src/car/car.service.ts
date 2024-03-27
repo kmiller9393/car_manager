@@ -17,6 +17,7 @@ export class CarService {
   // update any type later below
   public getCarById(id: number): Promise<any> {
     const carId = Number(id);
+
     return new Promise((resolve) => {
       const car = this.cars.find((car) => car.id === carId);
 
@@ -30,6 +31,7 @@ export class CarService {
 
   public deleteCarById(id: number): Promise<any> {
     const carId = Number(id);
+
     return new Promise((resolve) => {
       const index = this.cars.findIndex((car) => car.id === carId);
 
